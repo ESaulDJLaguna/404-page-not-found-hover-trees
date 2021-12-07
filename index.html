@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/error-404.png" type="image/x-icon">
+	<link rel="stylesheet" href="CSS/styles.css">
+	<title>404 Page Not Found</title>
+</head>
+
+<body>
+	<main class="container">
+		<h1 class="text">404</h1>
+		<div class="content">
+			<p>The page you are looking for doesn't exists.</p>
+			<a href="#" class="btn">go back to home</a>
+		</div>
+
+		<img src="img/tree.png" class="tree">
+	</main>
+
+	<script>
+		let container = document.querySelector(".container");
+		let text = document.querySelector(".text");
+
+		container.addEventListener('mousemove', (e) => {
+			/*
+			 * innerWidth: retorna el ancho interior de una ventana (viewport Width), incluyendo el scroll vertical si lo hay
+			 * innerHeight: como innterWidth, pero retorna altura
+			 * e.pageX/Y: retorna la coordenada horizontal/vertical del evento, relativo al documento completo
+			*/
+			let x = (window.innerWidth / 2 - e.pageX) / 10;
+			let y = (window.innerHeight / 2 - e.pageY) / 10;
+
+			text.style.transform = `translateX(${x}px) translateY(${y}px)`
+		})
+	</script>
+
+</body>
+
+</html>

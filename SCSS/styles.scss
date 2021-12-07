@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  // Similar que border, pero no suman tamaño a la caja, los contornos no pueden ser rectángulos
+  outline: none;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+  // Permite definir la transición entre dos estados de un elemento
+  transition: {
+    // Define los nombres de las propiedades CSS en las que el efecto de la transición debe aplicarse. all: todas las propiedades que puedan tener una transición animada la tendrán
+    property: all;
+    // Tiempo que debe tardar una animación
+    duration: 0.3s;
+    // Establece cómo se calculan los valores intermedios para las propiedades CSS afectadas por un efecto de transición. linear: transiciones a uan velocidad uniforme
+    timing-function: linear;
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  .text {
+    text-align: center;
+    font-size: 30vw;
+    color: #fff;
+    text-shadow: 1px 1px 0px #0002, 1px 1px 0px #aaa, 2px 2px 0px #aaa,
+      3px 3px 0px #aaa, 4px 4px 0px #aaa, 5px 5px 0px #aaa, 6px 6px 0px #aaa,
+      7px 7px 0px #aaa, 8px 8px 0px #aaa, 9px 9px 0px #aaa, 10px 10px 0px #aaa,
+      11px 11px 0px #aaa, 12px 12px 0px #aaa, 13px 13px 0px #aaa,
+      14px 14px 0px #aaa, 15px 15px 0px #0009, 20px 20px 10px #aaa9;
+  }
+
+  .content {
+    position: absolute;
+    margin: 30px 0;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+
+    p {
+      font-size: 30px;
+      color: #fff;
+      text-shadow: 0 5px 10px #000;
+      padding: 25px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      height: 50px;
+      width: 250px;
+      // Especifica la distancia entre párrrafos, en este caso se usa para centrar el texto
+      line-height: 50px;
+      background-color: #fff;
+      color: #444;
+      font-size: 20px;
+      box-shadow: 0 5px 10px #0009;
+
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+.tree {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
