@@ -41,13 +41,13 @@ npm install -g sass
 1. Clonar el repositorio:
 
 ```
-git clone https://github.com/ESaulDJLaguna/404-page-not-found-hover-trees.git
+git clone https://github.com/ESaulDJLaguna/estudio-404PageNotFoundHoverTrees.git
 ```
 
 2. Accede a la carpeta que se creo al clonar el repositorio:
 
 ```
-cd 404-page-not-found-hover-trees/
+cd estudio-404PageNotFoundHoverTrees/
 ```
 
 1. Transpila el código _SCSS_, y mantente en modo observador para capturar todos los cambios que se hagan:
